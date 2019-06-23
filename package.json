@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"  },
+    "test": "mocha"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/notblizzard/penguin.git"
@@ -20,6 +21,7 @@
     "chalk": "^2.4.2",
     "express": "^4.17.1",
     "md5": "^2.2.1",
+    "mocha": "^6.1.4",
     "moment": "^2.24.0",
     "uuid": "^3.3.2"
   }
