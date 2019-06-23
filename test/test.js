@@ -3,13 +3,6 @@ const websocket = require("../websocket.js");
 const WebSocket = require("ws");
 const moment = require("moment");
 
-/*describe("getColor", () => {
-    it("should return the correct hex", () => {
-
-    })
-}) */
-
-//let ws = '';
 describe("websocket", function() {
     let ws = '';
     beforeEach((done) => {
@@ -17,10 +10,6 @@ describe("websocket", function() {
         ws = new WebSocket("ws://127.0.0.1:7000");
         ws.on("open", () => {
             done();
-            //ws.send("LOL");
-           /* ws.on("message", (message) => {
-                done()
-            }) */
         })
     })
 
@@ -28,17 +17,13 @@ describe("websocket", function() {
        websocket.server.close();
         ws.close();
         done()
-       // done()
-
     })
 
     it("should return an error about username", function() {
-       // ws.on("open", () => {
             ws.send(JSON.stringify({"username": "a"}));
             ws.on("message", (message) => {
                 message.should.equal(JSON.stringify({"error":"username must be more than 2 characters, and less than 12 characters."}));
             })
-        //})
     })
 
     it("should return username with color", function() {
@@ -47,8 +32,6 @@ describe("websocket", function() {
                 message.should.equal(JSON.stringify({"username": "penguin", "color": "#24f7ca"}));
             })
         })
-       // let answer_ = answer
-        //answer_["username"] = "penguin"
 
     it("should return an error about username not existing", function() {
         let message_ = {"message": "Hello", "username": "penguin"}
