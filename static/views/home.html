@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Indie+Flower&display=swap" rel="stylesheet">
+        <link href="/css/custom.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="penguin" class="container">
+
+            <p id="title">Penguin</p>
+            <div class="row">
+                <div class="col-md-10 col-sm-12" id="chatbox">
+                    <p id="message_" v-for="message in messages">
+                        <b id="timestamp">{{message.timestamp}}</b>|<b v-bind:style="{color: message.color}">{{message.username}}</b><b>: {{message.message}}</b>
+                    </p>
+                </div>
+                <div class="col-md-2 col-auto mr-auto d-inline-flex d-md-block" id="userlist">
+                    <p class="userlist md-auto mr-auto">Userlist ({{userlist.length}})</p>
+                    <b v-for="user in userlist" v-bind:style="{color:user.color}">{{user.username}}<br /></b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 input-group-sm px-0">
+                    <input type="text" v-if="usernameValid" class="form-control" placeholder="message" v-bind:value="messageInput" id="message" v-on:keyup.enter="sendMessage">
+                    <input type="text" v-else class="form-control" placeholder="message" v-bind:value="messageInput" id="message" disabled>
+                </div>
+                <div class="col-md-2 input-group-sm px-0">
+                    <input type="text" class="form-control" placeholder="username" id="username" v-bind:value="usernameInput" v-on:keyup.enter="sendUsername">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 px-0">
+                    <i id="error">{{error}}</i>
+                </div>
+                <div class="col-2 px-0">
+                    <i v-bind:style="{color:color}">{{username}}</i>
+                </div>
+            </div>
+        </div>
+        <script scr="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

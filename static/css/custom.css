@@ -1,0 +1,49 @@
+body {
+    background-color: #030c12;
+    font-family: "Roboto", sans-serif;
+}
+#title {
+    color: white;
+    text-align: center;
+    font-family: "Indie Flower", cursive;
+    font-size: 28px;
+}
+#title:first-letter {
+    color: #e6f28e;
+}
+#username {
+    border: 0;
+}
+#username_ {
+    height: 10px;
+}
+#userlist {
+    background-color: #1e1d1e;
+    text-align: center;
+    padding: 8px;
+}
+#userlist .userlist {
+    font-size: 20px;
+    color: #f4f4e6;
+}
+input {
+    border-radius: 0 !important;
+}
+#error {
+    color: #af4242;
+    font-weight: bold;
+
+}
+#chatbox {
+    background-color: #1b2020;
+    height: 40rem !important;
+    padding: 8px;
+}
+
+#message_ {
+    color: #f4f4e6;
+    line-height: 0.4em;
+}
+#timestamp {
+    color: #edf466;
+}

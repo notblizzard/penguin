@@ -1,0 +1,26 @@
+{
+  "name": "penguin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notblizzard/penguin.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/notblizzard/penguin/issues"
+  },
+  "homepage": "https://github.com/notblizzard/penguin#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chalk": "^2.4.2",
+    "express": "^4.17.1",
+    "md5": "^2.2.1",
+    "moment": "^2.24.0",
+    "uuid": "^3.3.2"
+  }
+}
