@@ -10,7 +10,7 @@ const data = yaml.safeLoad(fs.readFileSync("./config.yaml", "utf-8"))["penguin"]
 const port = data["website"] || process.env.WEBSITE_PORT;
 const websocketPort = data["websocket"] || process.env.WEBSOCKET_PORT;
 
-app.use(express.static("static"));
+app.use(express.static("dist"));
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/static/views/home.html");
 })

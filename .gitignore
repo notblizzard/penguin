@@ -61,4 +61,5 @@ typings/
 .next
 
 .vscode
-/config.yml
+/config.yaml
+dist
