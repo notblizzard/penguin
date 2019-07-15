@@ -26,7 +26,7 @@ websockets.getUserlist = function getUserlist(clients) {
     // get usernames from websocket.
     const usernames = { userlist: [] };
     clients.forEach((user) => {
-        if ({}.hasOwnProperty.call(user, "username") && user.username === false) {
+        if ({}.hasOwnProperty.call(user, "username") && user.inactive === false) {
             usernames.userlist.push({ username: user.username, color: user.color });
         }
     });
