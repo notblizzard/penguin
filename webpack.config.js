@@ -14,10 +14,10 @@ module.exports = {
     ],
     module: {
         rules: [
-                {
-                    test: /\.css$/,
-                    use: [MiniCssExtractPlugin.loader, "css-loader"],
-                }
-            ]
-        }
-}
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
+            },
+        ],
+    },
+};
